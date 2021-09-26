@@ -5,4 +5,12 @@
   padding: 0;
   list-style: none;
 }
+
+.hidden-section {
+  display: none;
+}
+
+.input-section {
+  background-color: blue;
+}
 /*# sourceMappingURL=main.css.map */
