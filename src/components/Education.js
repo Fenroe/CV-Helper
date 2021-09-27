@@ -44,22 +44,27 @@ class Education extends Component {
           <label>Institution</label>
           <input
           defaultValue = {item.institution}
+          onChange = {evt => this.updateInstitution(evt.target.value)}
           />
           <label>Subject</label>
           <input 
           defaultValue = {item.subject}
+          onChange = {evt => this.updateSubject(evt.target.value)}
           />
           <label>Start Date</label>
           <input
           defaultValue = {item.startDate}
+          onChange = {evt => this.updateStartDate(evt.target.value)}
           />
           <label>End Date</label>
           <input
           defaultValue = {item.endDate}
+          onChange = {evt => this.updateEndDate(evt.target.value)}
           />
           <label>Description</label>
           <input
           defaultValue = {item.description}
+          onChange = {evt => this.updateDescription(evt.target.value)}
           />
         </div>
       )
