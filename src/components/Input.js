@@ -89,12 +89,12 @@ class Input extends Component {
     return(
       <div>
         <PersonalInfo
-        personalInfo ={this.props.personalInfo}
-        updatePersonalInfo = {this.props.updatePersonalInfo}
+        data ={this.props.personalInfo}
+        update = {this.props.updatePersonalInfo}
         ></PersonalInfo>
         <Statement
-        statement = {this.props.statement}
-        updateStatement = {this.props.updateStatement}
+        data = {this.props.statement}
+        update = {this.props.updateStatement}
         ></Statement>
         <Skills
         skills = {this.props.skills}

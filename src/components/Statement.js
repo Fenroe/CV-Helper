@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
 
 class Statement extends Component {
@@ -12,7 +13,9 @@ class Statement extends Component {
         <form>
           <label>Personal Statement</label>
           <input
-          type = 'text' />
+          type = 'text' 
+          defaultValue = {this.props.data}
+          onChange = {evt => this.props.update(evt.target.value)} />
         </form>
       </div>
     )

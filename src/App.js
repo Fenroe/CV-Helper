@@ -23,7 +23,6 @@ class App extends Component {
       personalInfo: {
         firstName: '',
         lastName: '',
-        dob: '',
         phoneNumber: '',
         email: '',
         website: '',
