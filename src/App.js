@@ -122,7 +122,7 @@ class App extends Component {
   addEducation() {
     const key = this.updateKey();
     const item = { key: key, institution: '', subject: '', startDate: '', endDate: '', description: '' };
-    const education = this.state.experience.concat([item]);
+    const education = this.state.education.concat([item]);
     this.updateEducation(education);
   }
 
