@@ -20,6 +20,7 @@ class App extends Component {
     super(props)
 
     this.state = {
+      key: 1,
       personalInfo: {
         firstName: '',
         lastName: '',
@@ -28,16 +29,50 @@ class App extends Component {
         website: '',
       },
       statement: '',
-      skills: [],
-      experience: [],
-      education: [],
+      skills: [
+        {
+          key: 0,
+          text: '',
+        },
+      ],
+      experience: [
+        {
+          key: 0,
+          company: '',
+          title: '',
+          startDate: '',
+          endDate: '',
+          description: '',
+        }
+      ],
+      education: [
+        {
+          key: 0,
+          institution: '',
+          subject: '',
+          startDate: '',
+          endDate: '',
+          description: '',
+        }
+      ],
     }
 
     this.updatePersonalInfo = this.updatePersonalInfo.bind(this);
     this.updateStatement = this.updateStatement.bind(this);
     this.updateSkills = this.updateSkills.bind(this);
+    this.addSkill = this.addSkill.bind(this);
     this.updateExperience = this.updateExperience.bind(this);
+    this.addExperience = this.addExperience.bind(this);
     this.updateEducation = this.updateEducation.bind(this);
+    this.addEducation = this.addEducation.bind(this);
+  }
+
+  updateKey() {
+    const key = this.state.key;
+    this.setState({
+      key: key +1,
+    })
+    return key;
   }
 
   updatePersonalInfo(personalInfo) {
@@ -58,16 +93,37 @@ class App extends Component {
     })
   }
 
+  addSkill() {
+    const key = this.updateKey();
+    const item = { key: key, text: '' };
+    const skills = this.state.skills.concat([item]);
+    this.updateSkills(skills);
+  }
+
   updateExperience(experience) {
     this.setState({
       experience: experience,
     })
   }
 
+  addExperience() {
+    const key = this.updateKey();
+    const item = { key: key, company: '', title: '', startDate: '', endDate: '', description: '' };
+    const experience = this.state.experience.concat([item]);
+    this.updateExperience(experience);
+  }
+
   updateEducation(education) {
     this.setState({
       education: education,
     })
+  }
+
+  addEducation() {
+    const key = this.updateKey();
+    const item = { key: key, institution: '', subject: '', startDate: '', endDate: '', description: '' };
+    const education = this.state.experience.concat([item]);
+    this.updateEducation(education);
   }
 
   render() {
@@ -81,10 +137,13 @@ class App extends Component {
         updateStatement = {this.updateStatement}
         skills = {this.state.skills}
         updateSkills = {this.updateSkills}
+        addSkill = {this.addSkill}
         experience = {this.state.experience}
         updateExperience = {this.updateExperience}
+        addExperience = {this.addExperience}
         education = {this.state.education}
         updateEducation = {this.updateEducation}
+        addEducation = {this.addEducation}
         ></Input>
       </div>
     )

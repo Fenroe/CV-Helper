@@ -97,16 +97,19 @@ class Input extends Component {
         update = {this.props.updateStatement}
         ></Statement>
         <Skills
-        skills = {this.props.skills}
-        updateSkills = {this.props.updateSkills}
+        data = {this.props.skills}
+        add = {this.props.addSkill}
+        update = {this.props.updateSkills}
         ></Skills>
         <Experience
-        experience = {this.props.experience}
-        updateExperience = {this.props.updateExperience}
+        data = {this.props.experience}
+        add = {this.props.addExperience}
+        update = {this.props.updateExperience}
         ></Experience>
         <Education
-        education = {this.props.education}
-        updateEducation = {this.props.updateEducation}
+        data = {this.props.education}
+        add = {this.props.addEducation}
+        update = {this.props.updateEducation}
         ></Education>
       </div>
     )
