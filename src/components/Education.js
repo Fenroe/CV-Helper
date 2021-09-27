@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Education extends Component {
-  constuctor(props) {
+  constructor(props) {
     super(props);
   }
 
@@ -78,7 +78,7 @@ class Education extends Component {
         <h2>Education</h2>
         <form
         onSubmit = {e => e.preventDefault()}>
-
+          {this.renderData()}
           <button
           onClick = {this.props.add}>
             Add Institution
