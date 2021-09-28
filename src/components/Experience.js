@@ -22,13 +22,15 @@ class Experience extends Component {
           defaultValue = {item.title}
           onChange = {evt => this.updateTitle(evt.target.value)}
           />
-          <label>Start Date</label>
+          <label>Start Year</label>
           <input
+          type = 'number'
           defaultValue = {item.startDate}
           onChange = {evt => this.updateStartDate(evt.target.value)}
           />
-          <label>End Date</label>
+          <label>End Year</label>
           <input
+          type = 'number'
           defaultValue = {item.endDate}
           onChange = {evt => this.updateEndDate(evt.target.value)}
           />

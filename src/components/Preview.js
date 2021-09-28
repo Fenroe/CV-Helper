@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
 import PersonalInfoPreview from "./PersonalInfoPreview";
+import StatementPreview from "./StatementPreview";
 
 class Preview extends Component {
   constructor(props) {
@@ -13,6 +14,9 @@ class Preview extends Component {
         <PersonalInfoPreview
         data = {this.props.personalInfo}
         ></PersonalInfoPreview>
+        <StatementPreview
+        data = {this.props.statement}
+        ></StatementPreview>
       </div>
     )
   }
