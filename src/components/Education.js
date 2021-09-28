@@ -53,12 +53,12 @@ class Education extends Component {
           defaultValue = {item.subject}
           onChange = {evt => this.updateSubject(evt.target.value)}
           />
-          <label>Start Date</label>
+          <label>Start Year</label>
           <input
           defaultValue = {item.startDate}
           onChange = {evt => this.updateStartDate(evt.target.value)}
           />
-          <label>End Date</label>
+          <label>End Year</label>
           <input
           defaultValue = {item.endDate}
           onChange = {evt => this.updateEndDate(evt.target.value)}
