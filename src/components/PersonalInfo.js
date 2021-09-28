@@ -47,26 +47,26 @@ class PersonalInfo extends Component {
         onSubmit = {e => e.preventDefault()}>
           <label>First Name</label>
           <input
-          defaultValue = {this.props.data.firstName}
+          value = {this.props.data.firstName}
           onChange = {evt => this.updateFirstName(evt)}/>
           <label>Last Name</label>
           <input 
-          defaultValue = {this.props.data.lastName}
+          value = {this.props.data.lastName}
           onChange = {evt => this.updateLastName(evt)}/>
           <label>Phone Number</label>
           <input 
           type = 'tel'
-          defaultValue = {this.props.data.phoneNumber}
+          value = {this.props.data.phoneNumber}
           onChange = {evt => this.updatePhoneNumber(evt)}/>
           <label>Email Address</label>
           <input 
           type = 'email'
-          defaultValue = {this.props.data.email}
+          value = {this.props.data.email}
           onChange = {evt => this.updateEmail(evt)}/>
           <label>Website</label>
           <input 
           type = 'url'
-          defaultValue = {this.props.data.website}
+          value = {this.props.data.website}
           onChange = {evt => this.updateWebsite(evt)}/>
         </form>
       </div>

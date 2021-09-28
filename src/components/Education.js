@@ -6,33 +6,53 @@ class Education extends Component {
     super(props);
   }
 
-  updateInstitution(institution) {
-    const data = this.props.data;
-    data.institution = institution;
+  updateInstitution(key, institution) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.institution = institution;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateSubject(subject) {
-    const data = this.props.data;
-    data.subject = subject;
+  updateSubject(key, subject) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.subject = subject;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateStartDate(startDate) {
-    const data = this.props.data;
-    data.startDate = startDate;
+  updateStartDate(key, startDate) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.startDate = startDate;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateEndDate(endDate) {
-    const data = this.props.date;
-    data.endDate = endDate;
+  updateEndDate(key, endDate) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.endDate = endDate;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateDescription(description) {
-    const data = this.props.data;
-    data.description = description;
+  updateDescription(key, description) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.description = description;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
@@ -45,28 +65,28 @@ class Education extends Component {
         >
           <label>Institution</label>
           <input
-          defaultValue = {item.institution}
-          onChange = {evt => this.updateInstitution(evt.target.value)}
+          value = {item.institution}
+          onChange = {evt => this.updateInstitution(item.key, evt.target.value)}
           />
           <label>Subject</label>
           <input 
-          defaultValue = {item.subject}
-          onChange = {evt => this.updateSubject(evt.target.value)}
+          value = {item.subject}
+          onChange = {evt => this.updateSubject(item.key, evt.target.value)}
           />
           <label>Start Year</label>
           <input
-          defaultValue = {item.startDate}
-          onChange = {evt => this.updateStartDate(evt.target.value)}
+          value = {item.startDate}
+          onChange = {evt => this.updateStartDate(item.key, evt.target.value)}
           />
           <label>End Year</label>
           <input
-          defaultValue = {item.endDate}
-          onChange = {evt => this.updateEndDate(evt.target.value)}
+          value = {item.endDate}
+          onChange = {evt => this.updateEndDate(item.key, evt.target.value)}
           />
           <label>Description</label>
           <input
-          defaultValue = {item.description}
-          onChange = {evt => this.updateDescription(evt.target.value)}
+          value = {item.description}
+          onChange = {evt => this.updateDescription(item.key, evt.target.value)}
           />
         </div>
       )

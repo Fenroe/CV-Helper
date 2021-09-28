@@ -16,7 +16,7 @@ class Statement extends Component {
           <label>Personal Statement</label>
           <textarea
           className = 'input-text-box' 
-          defaultValue = {this.props.data}
+          value = {this.props.data}
           onChange = {evt => this.props.update(evt.target.value)} />
         </form>
       </div>

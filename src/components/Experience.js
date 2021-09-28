@@ -14,30 +14,28 @@ class Experience extends Component {
         key = {item.key}>
           <label>Company</label>
           <input
-          defaultValue = {item.company}
-          onChange = {evt => this.updateCompany(evt.target.value)}
+          value = {item.company}
+          onChange = {evt => this.updateCompany(item.key, evt.target.value)}
           />
           <label>Job Title</label>
           <input
-          defaultValue = {item.title}
-          onChange = {evt => this.updateTitle(evt.target.value)}
+          value = {item.title}
+          onChange = {evt => this.updateTitle(item.key, evt.target.value)}
           />
           <label>Start Year</label>
           <input
-          type = 'number'
-          defaultValue = {item.startDate}
-          onChange = {evt => this.updateStartDate(evt.target.value)}
+          value = {item.startDate}
+          onChange = {evt => this.updateStartDate(item.key, evt.target.value)}
           />
           <label>End Year</label>
           <input
-          type = 'number'
-          defaultValue = {item.endDate}
-          onChange = {evt => this.updateEndDate(evt.target.value)}
+          value = {item.endDate}
+          onChange = {evt => this.updateEndDate(item.key, evt.target.value)}
           />
           <label>Description</label>
           <input
-          defaultValue = {item.description}
-          onChange = {evt => this.updateDescription(evt.target.value)}
+          value = {item.description}
+          onChange = {evt => this.updateDescription(item.key, evt.target.value)}
           />
         </div>
       )
@@ -45,33 +43,53 @@ class Experience extends Component {
     return renderedData;
   }
 
-  updateCompany(company) {
-    const data = this.props.data;
-    data.company = company;
+  updateCompany(key, company) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.company = company;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateTitle(title) {
-    const data = this.props.data;
-    data.title = title;
+  updateTitle(key, title) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.title = title;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateStartDate(startDate) {
-    const data = this.props.data;
-    data.startDate = startDate;
+  updateStartDate(key, startDate) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.startDate = startDate;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateEndDate(endDate) {
-    const data = this.props.data;
-    data.endDate = endDate;
+  updateEndDate(key, endDate) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.endDate = endDate;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 
-  updateDescription(description) {
-    const data = this.props.data;
-    data.description = description;
+  updateDescription(key, description) {
+    const data = this.props.data.map(item => {
+      if (item.key === key) {
+        item.description = description;
+      }
+      return item;
+    })
     this.props.update(data);
   }
 

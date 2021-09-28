@@ -14,7 +14,7 @@ class Skills extends Component {
         key = {item.key}>
           <label>Skill {this.props.data.indexOf(item)+1}</label>
           <input 
-          defaultValue = {item.text}
+          value = {item.text}
           onChange = {evt => this.editData(item.key, evt.target.value)}
           />
         </div>
