@@ -10,6 +10,7 @@ class Experience extends Component {
     const renderedData = this.props.data.map(item => {
       return(
         <div
+        className = 'rendered-data-container'
         key = {item.key}>
           <label>Company</label>
           <input

@@ -43,7 +43,7 @@ input {
   font-size: 2rem;
   height: 2.2rem;
   padding: 1rem;
-  background-color: FEFBF3;
+  background-color: #FEFBF3;
 }
 
 button {
@@ -52,4 +52,20 @@ button {
   width: 20rem;
   text-align: center;
   margin: 1rem auto; 
+}
+
+.rendered-data-container {
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 32rem;
+  height: 12rem;
+  outline: none;
+  display: block;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #FEFBF3;
 }

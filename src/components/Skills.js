@@ -10,6 +10,7 @@ class Skills extends Component {
     const renderedData = this.props.data.map(item => {
       return (
         <div
+        className = 'rendered-data-container'
         key = {item.key}>
           <label>Skill {this.props.data.indexOf(item)+1}</label>
           <input 
