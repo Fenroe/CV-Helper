@@ -74,7 +74,9 @@ class Experience extends Component {
 
   render() {
     return(
-      <div>
+      <div
+      className = 'input-section'
+      >
         <h2>Experience</h2>
         <form
         onSubmit = {e => e.preventDefault()}

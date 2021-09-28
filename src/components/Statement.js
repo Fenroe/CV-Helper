@@ -8,12 +8,14 @@ class Statement extends Component {
 
   render() {
     return(
-      <div>
+      <div
+      className = 'input-section'
+      >
         <h2>Statement</h2>
         <form>
           <label>Personal Statement</label>
-          <input
-          type = 'text' 
+          <textarea
+          className = 'input-text-box' 
           defaultValue = {this.props.data}
           onChange = {evt => this.props.update(evt.target.value)} />
         </form>

@@ -75,7 +75,9 @@ class Education extends Component {
 
   render() {
     return(
-      <div>
+      <div
+      className = 'input-section'
+      >
         <h2>Education</h2>
         <form
         onSubmit = {e => e.preventDefault()}>

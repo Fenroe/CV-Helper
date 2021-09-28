@@ -38,12 +38,15 @@ class PersonalInfo extends Component {
 
   render() {
     return(
-      <div>
-        <h2>Personal Info</h2>
+      <div
+      className = 'input-section'
+      >
+        <h2
+        >Personal Info</h2>
         <form 
         onSubmit = {e => e.preventDefault()}>
           <label>First Name</label>
-          <input 
+          <input
           defaultValue = {this.props.data.firstName}
           onChange = {evt => this.updateFirstName(evt)}/>
           <label>Last Name</label>

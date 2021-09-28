@@ -14,6 +14,7 @@
 
 import React, { Component } from "react";
 import Input from "./components/Input";
+import Preview from "./components/Preview";
 
 class App extends Component {
   constructor(props) {
@@ -129,7 +130,9 @@ class App extends Component {
   render() {
 
     return(
-      <div>
+      <div
+      className = 'app-view'
+      >
         <Input
         personalInfo = {this.state.personalInfo}
         updatePersonalInfo = {this.updatePersonalInfo}
@@ -145,6 +148,14 @@ class App extends Component {
         updateEducation = {this.updateEducation}
         addEducation = {this.addEducation}
         ></Input>
+        <Preview
+        personalInfo = {this.state.personalInfo}
+        statement = {this.state.statement}
+        skills = {this.state.skills}
+        experience = {this.state.experience}
+        education = {this.state.education}
+        >
+        </Preview>
       </div>
     )
   }

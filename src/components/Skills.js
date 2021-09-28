@@ -11,6 +11,7 @@ class Skills extends Component {
       return (
         <div
         key = {item.key}>
+          <label>Skill {this.props.data.indexOf(item)+1}</label>
           <input 
           defaultValue = {item.text}
           onChange = {evt => this.editData(item.key, evt.target.value)}
@@ -33,7 +34,9 @@ class Skills extends Component {
 
   render() {
     return(
-      <div>
+      <div
+      className = 'input-section'
+      >
         <h2>Skills</h2>
         <form
         onSubmit = {e => e.preventDefault()}

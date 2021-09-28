@@ -2,3 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.app-view {
+  display: flex;
+}
+
+.input-view {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #79B4B7;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 3rem;
+  background-color: #F8F0DF;
+  margin: 0 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #9D9D9D;
+}
+
+label {
+  display: block;
+  font-size: 2rem;
+  color: #9D9D9D;
+}
+
+input {
+  outline: none;
+  display: block;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 2rem;
+  height: 2.2rem;
+  padding: 1rem;
+  background-color: FEFBF3;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 20rem;
+  text-align: center;
+  margin: 1rem auto; 
+}
